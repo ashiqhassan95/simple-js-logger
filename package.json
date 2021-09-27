@@ -1,5 +1,5 @@
 {
-  "name": "simple-js-logger",
+  "name": "simple-js-logger-winston",
   "version": "1.0.0",
   "description": "Simple Logger for JavaScript application",
   "scripts": {
