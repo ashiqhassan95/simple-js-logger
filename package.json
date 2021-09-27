@@ -1,22 +1,44 @@
 {
   "name": "simple-js-logger",
   "version": "1.0.0",
-  "description": "Logger for JavaScript application",
+  "description": "Simple Logger for JavaScript application",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashiqhassan95/simple-js-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashiqhassan95/simple-js-logger/issues"
   },
   "keywords": [
-    "logger"
+    "logger",
+    "simple-logger"
+  ],
+  "files": [
+    "dist/**/*"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "prepublish": "tsc",
   "author": "Ashique Hassan",
   "license": "MIT",
+  "homepage": "https://github.com/ashiqhassan95/simple-js-logger",
   "dependencies": {
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "prettier": "^2.4.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.4.3"
   }
 }
