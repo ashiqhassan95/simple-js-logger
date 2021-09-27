@@ -1,0 +1,22 @@
+{
+  "name": "simple-js-logger",
+  "version": "1.0.0",
+  "description": "Logger for JavaScript application",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "author": "Ashique Hassan",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
